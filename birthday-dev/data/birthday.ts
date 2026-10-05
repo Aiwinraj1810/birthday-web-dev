@@ -181,6 +181,24 @@ export const birthday = {
   ending: {
     first: ["I'm really glad", "*you're here.*"],
     second: ["Happy Birthday,", "*Sanvika.*"],
+    celebrate: "Tap to celebrate",
     replay: "Experience again",
+  },
+
+  // The very last screen: a small envelope that opens on tap. Write your message here.
+  surprise: {
+    label: "One more thing",
+    hint: "Tap to open",
+    message: [
+      "Your personal message goes here.",
+      "Write whatever you'd like her to read last.",
+    ],
+    note: "always",
+  },
+
+  // Link preview (WhatsApp, iMessage…). The image is generated in app/opengraph-image.tsx.
+  meta: {
+    title: "For Sanvika",
+    description: "I made something for you.",
   },
 };

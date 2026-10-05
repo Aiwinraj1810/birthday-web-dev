@@ -55,7 +55,7 @@ export default function LittleThings() {
             key={item.text}
             data-item
             style={{ top: `${item.y}%` }}
-            className={`absolute text-[clamp(1.9rem,8.4vw,3.7rem)] font-light leading-[1.12] ${
+            className={`absolute text-[clamp(1.9rem,8.4vw,3.7rem)] font-normal leading-[1.12] ${
               left
                 ? "left-7 right-[20%] text-left md:left-[12vw] md:right-[50vw]"
                 : "left-[20%] right-7 text-right md:left-[50vw] md:right-[12vw]"
@@ -67,7 +67,7 @@ export default function LittleThings() {
       })}
 
       <div data-final className="absolute inset-0 flex flex-col items-center justify-center px-7 text-center">
-        <Lines lines={c.final} className="text-[clamp(3rem,15vw,8rem)] font-light leading-[1.02] tracking-[-0.02em] [&>span:first-child]:text-[0.34em] [&>span:first-child]:italic [&>span:first-child]:text-cream/70" />
+        <Lines lines={c.final} className="text-[clamp(3rem,15vw,8rem)] font-normal leading-[1.02] tracking-[-0.02em] [&>span:first-child]:text-[0.34em] [&>span:first-child]:italic [&>span:first-child]:text-cream/70" />
       </div>
     </section>
   );

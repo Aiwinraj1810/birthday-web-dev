@@ -40,7 +40,7 @@ export default function Preface() {
     <section ref={ref} className="relative h-svh w-full overflow-hidden">
       <div className="absolute inset-0 flex flex-col justify-center px-7 md:mx-auto md:max-w-[52rem] md:px-0">
         <p className="label mb-8">{c.label}</p>
-        <p className="text-[clamp(1.95rem,8.2vw,3.8rem)] font-light leading-[1.18] tracking-[-0.01em]">
+        <p className="text-[clamp(1.95rem,8.2vw,3.8rem)] font-normal leading-[1.18] tracking-[-0.01em]">
           {words.map((word, i) => (
             <span key={i} data-word className={`inline-block opacity-[0.14] ${word.italic ? "italic" : ""}`}>
               {word.text}&nbsp;

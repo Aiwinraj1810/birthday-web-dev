@@ -5,6 +5,7 @@ import { gsap } from "@/lib/gsap";
 import { useResponsiveAnimation } from "../animations/useResponsiveAnimation";
 import { birthday, photos } from "@/data/birthday";
 import { Photo } from "./Photo";
+import { TypedText } from "./TypedText";
 
 /**
  * The letter pins to the top of the screen and the page scrolls *through* it,
@@ -55,6 +56,19 @@ export default function Letter() {
         invalidateOnRefresh: true,
       },
     });
+
+    // The message writes itself out, then the sign-off appears.
+    const chars = q("[data-char]");
+    const sign = q("[data-sign]");
+    if (m.reduced) {
+      gsap.set([...chars, ...sign], { opacity: 1 });
+      return;
+    }
+    const each = Math.min(0.04, 16 / chars.length); // never longer than ~16s
+    gsap
+      .timeline({ scrollTrigger: { trigger: el, start: "top 35%", once: true } })
+      .to(chars, { opacity: 1, duration: 0.05, ease: "none", stagger: { each } })
+      .fromTo(sign, { opacity: 0 }, { opacity: 1, duration: 1.2 }, ">0.2");
   });
 
   return (
@@ -74,21 +88,21 @@ export default function Letter() {
           />
 
           <p className="label !text-[rgb(43_37_31/0.55)]">{c.label}</p>
-          <p className="mt-10 text-[2.3rem] font-light italic leading-tight md:text-[2.8rem]">
-            {c.greeting}
+          <p className="mt-10 text-[2.3rem] font-normal italic leading-tight md:text-[2.8rem]">
+            <TypedText text={c.greeting} />
           </p>
 
           <div className="mt-8 space-y-6 text-[1.4rem] leading-[1.6] md:text-[1.6rem]">
             {c.paragraphs.map((p, i) => (
               <p key={i} className={i === c.paragraphs.length - 1 ? "italic" : ""}>
-                {p}
+                <TypedText text={p} />
               </p>
             ))}
           </div>
 
-          <div className="mt-12 flex items-end gap-5">
+          <div data-sign className="mt-12 flex items-end gap-5 opacity-0">
             <span className="h-px w-14 bg-[rgb(43_37_31/0.4)]" />
-            <span className="script !text-[1.7rem] !text-[#8a6a3c] -rotate-2">{c.note}</span>
+            <span className="script !text-[1.7rem] !text-gold -rotate-2">{c.note}</span>
           </div>
         </div>
       </div>

@@ -18,6 +18,7 @@ import Countdown from "./Countdown";
 import BirthdayReveal from "./BirthdayReveal";
 import Letter from "./Letter";
 import Ending from "./Ending";
+import Surprise from "./Surprise";
 
 export default function Experience() {
   const curtain = useRef<HTMLDivElement>(null);
@@ -73,7 +74,8 @@ export default function Experience() {
       </div>
       <BirthdayReveal />
       <Letter />
-      <Ending onReplay={replay} />
+      <Ending />
+      <Surprise onReplay={replay} />
       <SoundToggle />
       <div
         ref={curtain}

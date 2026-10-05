@@ -69,7 +69,7 @@ export default function MemoryJourney() {
             />
             <div data-copy className="relative mt-9 md:mt-0 md:max-w-[22rem]">
               <div className="flex items-baseline gap-4">
-                <span className="text-[clamp(3.6rem,15vw,6.5rem)] font-light italic leading-none text-cream/90">
+                <span className="text-[clamp(3.6rem,15vw,6.5rem)] font-normal italic leading-none text-cream/90">
                   {mem.n}
                 </span>
                 <span className="label">{mem.date}</span>

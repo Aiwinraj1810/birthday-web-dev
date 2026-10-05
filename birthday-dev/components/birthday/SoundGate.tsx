@@ -141,7 +141,7 @@ export default function SoundGate() {
       <p
         key={tease}
         aria-live="polite"
-        className={`mt-12 min-h-[4.5rem] max-w-[20rem] text-[1.45rem] font-light italic leading-snug text-cream/75 ${tease >= 0 ? "tease-in" : "opacity-0"}`}
+        className={`mt-12 min-h-[4.5rem] max-w-[20rem] text-[1.45rem] font-normal italic leading-snug text-cream/75 ${tease >= 0 ? "tease-in" : "opacity-0"}`}
       >
         {tease >= 0 && !on ? c.teases[tease] : ""}
       </p>

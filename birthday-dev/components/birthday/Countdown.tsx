@@ -36,12 +36,12 @@ export default function Countdown() {
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(60% 45% at 50% 55%, rgb(184 151 95 / 0.55), rgb(184 151 95 / 0.12) 55%, transparent 80%)",
+            "radial-gradient(60% 45% at 50% 55%, rgb(244 150 105 / 0.5), rgb(244 150 105 / 0.12) 55%, transparent 80%)",
         }}
       />
       {numbers.map((n) => (
         <div key={n} data-num className="absolute inset-0 flex items-center justify-center">
-          <span className="text-[clamp(10rem,56vw,28rem)] font-light italic leading-none tracking-[-0.04em]">
+          <span className="text-[clamp(10rem,56vw,28rem)] font-normal italic leading-none tracking-[-0.04em]">
             {n}
           </span>
         </div>

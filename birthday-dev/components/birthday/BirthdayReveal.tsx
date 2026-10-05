@@ -160,17 +160,17 @@ export default function BirthdayReveal() {
             alt={photos.reveal.alt}
             fill
             sizes="100vw"
-            className="object-cover [filter:saturate(0.8)_contrast(1.05)_sepia(0.15)]"
+            className="object-cover [filter:saturate(1)_contrast(1.02)_sepia(0.05)]"
           />
         </div>
-        <div className="absolute inset-0 bg-[radial-gradient(90%_70%_at_50%_45%,transparent_30%,rgb(13_13_12/0.85))]" />
+        <div className="absolute inset-0 bg-[radial-gradient(90%_70%_at_50%_45%,transparent_30%,rgb(251_239_225/0.92))]" />
       </div>
       <div
         data-glow
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(60% 45% at 50% 55%, rgb(184 151 95 / 0.55), rgb(184 151 95 / 0.12) 55%, transparent 80%)",
+            "radial-gradient(60% 45% at 50% 55%, rgb(244 150 105 / 0.5), rgb(244 150 105 / 0.12) 55%, transparent 80%)",
         }}
       />
 
@@ -203,12 +203,12 @@ export default function BirthdayReveal() {
             lines={c.lines}
             as="h2"
             mask
-            className="text-[clamp(3rem,14.4vw,10rem)] font-light leading-[0.98] tracking-[0.01em]"
+            className="text-[clamp(3rem,14.4vw,10rem)] font-normal leading-[0.98] tracking-[0.01em]"
           />
           <Lines
             lines={[`*${c.name}*`]}
             mask
-            className="mt-4 text-[clamp(2.6rem,12vw,7rem)] font-light leading-none text-gold md:mt-6"
+            className="mt-4 text-[clamp(2.6rem,12vw,7rem)] font-normal leading-none text-gold md:mt-6"
           />
         </div>
       </div>
@@ -221,10 +221,10 @@ export default function BirthdayReveal() {
               alt={p.alt}
               fill
               sizes="100vw"
-              className="object-cover [filter:saturate(0.9)_contrast(1.04)_sepia(0.1)]"
+              className="object-cover [filter:saturate(1)_contrast(1.02)_sepia(0.05)]"
             />
           </div>
-          <div className="absolute inset-0 bg-[radial-gradient(110%_85%_at_50%_45%,transparent_55%,rgb(13_13_12/0.55))]" />
+          <div className="absolute inset-0 bg-[radial-gradient(110%_85%_at_50%_45%,transparent_55%,rgb(251_239_225/0.4))]" />
         </div>
       ))}
     </section>
