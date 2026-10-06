@@ -167,7 +167,7 @@ body::after {
 
 /* ---------- Blurred memory photos ---------- */
 .photo-blur img {
-  filter: blur(9px) saturate(1) brightness(1.04);
+  filter: blur(3.15px) saturate(1) brightness(1.04);
   transform: scale(1.14);
 }
 }

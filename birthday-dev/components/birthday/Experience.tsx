@@ -1,9 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { gsap, ScrollTrigger, useGSAP } from "@/lib/gsap";
-import { audio } from "../animations/useAudio";
-import { birthday } from "@/data/birthday";
+import { gsap, ScrollTrigger } from "@/lib/gsap";
 import Preface from "./Preface";
 import SoundGate from "./SoundGate";
 import SoundToggle from "./SoundToggle";
@@ -22,7 +20,6 @@ import Surprise from "./Surprise";
 
 export default function Experience() {
   const curtain = useRef<HTMLDivElement>(null);
-  const revealScene = useRef<HTMLDivElement>(null);
 
   // Always begin at the beginning, even on reload.
   useEffect(() => {
@@ -33,17 +30,6 @@ export default function Experience() {
       history.scrollRestoration = prev;
     };
   }, []);
-
-  // Track change: crossfade to the second track when the countdown begins (and back if she scrolls up past it).
-  useGSAP(() => {
-    const fade = birthday.audio.reveal.crossfadeSeconds;
-    ScrollTrigger.create({
-      trigger: revealScene.current,
-      start: "top 80%",
-      onEnter: () => audio.switchTo("second", fade),
-      onLeaveBack: () => audio.switchTo("main", fade),
-    });
-  });
 
   const replay = () => {
     const el = curtain.current;
@@ -69,7 +55,7 @@ export default function Experience() {
       <MemoryJourney />
       <LittleThings />
       <EmotionalPause />
-      <div ref={revealScene}>
+      <div>
         <Countdown />
       </div>
       <BirthdayReveal />

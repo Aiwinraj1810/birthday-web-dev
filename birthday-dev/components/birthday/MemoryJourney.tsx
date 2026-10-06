@@ -72,7 +72,7 @@ export default function MemoryJourney() {
                 <span className="text-[clamp(3.6rem,15vw,6.5rem)] font-normal italic leading-none text-cream/90">
                   {mem.n}
                 </span>
-                <span className="label">{mem.date}</span>
+                {mem.date && <span className="label">{mem.date}</span>}
               </div>
               <p className="whisper mt-4">
                 <Rich text={mem.text} />
