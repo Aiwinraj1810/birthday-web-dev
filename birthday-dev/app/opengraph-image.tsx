@@ -18,7 +18,7 @@ export default function Image() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "0 110px",
-          background: "linear-gradient(160deg, #fbefe1 0%, #f7d9bf 100%)",
+          background: "linear-gradient(160deg, #E6E6FA 0%, #D8BFD8 100%)",
           color: "#3a2b30",
           fontFamily: "serif",
         }}
@@ -27,7 +27,7 @@ export default function Image() {
           A small something
         </div>
         <div style={{ fontSize: 150, lineHeight: 1, marginTop: 28 }}>{birthday.meta.title}</div>
-        <div style={{ fontSize: 44, fontStyle: "italic", marginTop: 28, color: "#cf5a3e" }}>
+        <div style={{ fontSize: 44, fontStyle: "italic", marginTop: 28, color: "#B0507A" }}>
           {birthday.meta.description}
         </div>
       </div>

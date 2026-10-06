@@ -3,7 +3,7 @@
 import { gsap } from "./gsap";
 
 // Warm, restrained: the site's coral and a few soft companions.
-const colors = ["#cf5a3e", "#e9a23b", "#f2b8a8", "#9cc3a1", "#fbd9a8"];
+const colors = ["#FFB6C1", "#D8BFD8", "#B0507A", "#FFFDD0", "#E6E6FA"];
 
 /** A short burst of paper pieces from (x, y) that rise, then drift down and fade. */
 export function celebrate(x: number, y: number) {

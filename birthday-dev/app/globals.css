@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #fbefe1; /* page background (warm cream) */
-  --ink-2: #f6e6d3;
+  --ink: #E6E6FA; /* page background (lavender) */
+  --ink-2: #D8BFD8;
   --cream: #3a2b30; /* main text (deep warm plum) */
   --cream-dim: color-mix(in srgb, var(--cream) 62%, transparent);
-  --gold: #cf5a3e; /* accent (coral) */
-  --paper: #fffaf1;
+  --gold: #B0507A; /* accent (deep berry) */
+  --paper: #FFFDD0;
   --paper-ink: #3a2b30;
 }
 
@@ -39,7 +39,7 @@ body::after {
   z-index: 50;
   pointer-events: none;
   opacity: 0.07;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .25 0 0 0 0 .15 0 0 0 0 .12 0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .22 0 0 0 0 .16 0 0 0 0 .3 0 0 0 .6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
 /* Component classes live in a layer so Tailwind utilities (absolute, md:text-…) can override them. */
@@ -86,8 +86,8 @@ body::after {
 
 .photo {
   position: relative;
-  box-shadow: 0 26px 50px -22px rgb(110 60 45 / 0.45), 0 3px 10px rgb(110 60 45 / 0.18);
-  background: #ecd9c3;
+  box-shadow: 0 26px 50px -22px rgb(80 55 110 / 0.45), 0 3px 10px rgb(80 55 110 / 0.18);
+  background: #D8BFD8;
   /* The cinematic crop: slightly muted, warm and contrasty. */
 }
 .photo-inner {
@@ -96,13 +96,13 @@ body::after {
   overflow: hidden;
 }
 .photo-inner img {
-  filter: saturate(1) contrast(1.03) sepia(0.06);
+  filter: saturate(1) contrast(1.03) ;
 }
 .photo-inner::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(120% 90% at 50% 40%, transparent 55%, rgb(90 40 30 / 0.16));
+  background: radial-gradient(120% 90% at 50% 40%, transparent 55%, rgb(70 45 100 / 0.16));
   pointer-events: none;
 }
 
@@ -126,8 +126,8 @@ body::after {
 
 .paper {
   color: var(--paper-ink);
-  background: linear-gradient(172deg, #fffcf6 0%, #fdf3e3 100%);
-  box-shadow: 0 34px 70px -30px rgb(110 60 45 / 0.4), 0 2px 6px rgb(110 60 45 / 0.12);
+  background: linear-gradient(172deg, #FFFFFF 0%, #FFFDD0 100%);
+  box-shadow: 0 34px 70px -30px rgb(80 55 110 / 0.4), 0 2px 6px rgb(80 55 110 / 0.12);
 }
 .paper::before {
   content: "";
@@ -136,7 +136,7 @@ body::after {
   pointer-events: none;
   opacity: 0.16;
   mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3 0 0 0 0 .22 0 0 0 0 .12 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .3 0 0 0 0 .25 0 0 0 0 .22 0 0 0 1 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
 }
 
 /* ---------- Sound gate ---------- */
